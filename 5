@@ -1,0 +1,41 @@
+/*Faca um algoritmo q leia e armazene 5 valores inteiros em um vetor Vet1. Leia outros 5 valores
+inteiros e armazene num vetor Vet2. A partir destes valores lidos, mostre na tela:
+a soma dos elementos de cada vetor, nas respectivas posiçoes a diferença dos elementos de cada vetor, nas respectivas posições
+o produto dos elementos de cada vetor, nas respectivas posições
+a divisão entre os elementos de cada vetor, nas respectivas posições.*/
+
+//Inclusão de bibliotecas
+#include <stdio.h>
+
+//Função principal
+int main()
+{
+
+//Declaração de variáveis
+float Vet1[5], Vet2[5];
+
+//Entrada de dados
+for(int i = 0; i < 5; i++)
+    {
+    printf("Digite o %d valor de Vet1\n", i + 1);
+    scanf("%f", &Vet1[i]);
+    }
+for(int i = 0; i < 5; i++)
+    {
+    printf("Digite o %d valor de Vet2\n", i + 1);
+    scanf("%f", &Vet2[i]);
+    }
+    
+//Saída de dados
+for(int i = 0; i < 5; i++)
+    {
+    printf("A soma dos %d elementos = %.2f + %.2f = %.2f\n", i + 1, Vet1[i], Vet2[i], Vet1[i] + Vet2[i]);
+    printf("A diferenca dos %d elementos = %.2f - %.2f = %.2f\n", i + 1, Vet1[i], Vet2[i], Vet1[i] - Vet2[i]);
+    printf("O produto dos %d elementos = %.2f * %.2f = %.2f\n", i + 1, Vet1[i], Vet2[i], Vet1[i] * Vet2[i]);
+    printf("A divisao dos %d elementos = %.2f / %.2f = %.2f\n", i + 1, Vet1[i], Vet2[i], Vet1[i] / Vet2[i]);
+    printf("\n");
+    }
+    
+//Fim da função principal
+return 0;
+}
