@@ -1,0 +1,35 @@
+/*Faca um programa q leia n valores reais. Armazene estes valores num vetor. Ao final, imprima a 
+média aritmética destes valores.*/
+
+//Inclusão de bibliotecas
+#include <stdio.h>
+
+//Função principal
+int main()
+{
+//Declaração de variáveis
+int n;
+
+//Entrada de dados
+printf("Digite o tamanho do vetor\n");
+scanf("%d", &n);
+
+//Declaração de variáveis extras
+float valores[n], soma = 0, media = 0;
+
+for(int i = 0; i < n; i++)
+{
+    printf("Digite o %d° valor\n", i + 1);
+    scanf("%f", &valores[i]);
+    soma += valores[i];
+}
+
+//Cálculo
+media = soma / n;
+
+//Saída de dados
+printf("A media e = %.2f\n", media);
+
+//Fim da função principal
+return 0;
+}
