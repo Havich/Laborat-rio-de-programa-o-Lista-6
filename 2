@@ -1,0 +1,35 @@
+/*Armazene num vetor de 5 posições o salário de 5 pessoas. Se o salário for menor q 1000 reais, 
+forneça um aumento de 10% e sobrescreva o valor antigo. Ao final, mostre a lista de salários atualizada.*/
+
+//Inclusão de bibliotecas
+#include <stdio.h>
+
+//Função principal
+int main()
+{
+//Declaração de variáveis
+float salarios[5], menor;
+
+//Entrada de dados
+for(int i = 0; i < 5; i++)
+{
+    printf("Digite o %d salario\n", i + 1);
+    scanf("%f", &salarios[i]);
+}
+
+//Cálculo
+for(int i = 0; i < 5; i++)
+{
+    if(salarios[i] < 1000)
+        salarios[i] *= 1.1;
+}
+
+//Saída de dados
+for(int i = 0; i < 5; i++)
+{
+    printf("O %d salario = %.2f\n", i + 1, salarios[i]);
+}
+
+//Fim da função principal
+return 0;
+}
